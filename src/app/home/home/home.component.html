@@ -1,0 +1,239 @@
+<div id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container">
+            <!-- <i class="navbar-brand js-scroll-trigger">
+                <img src="../../../assets/img/icons/logo-trilha2.png" alt="">
+            </i> -->
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">TRILHA BR</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse navFonts" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" (click)="setRouter('sobre');">SOBRE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#services">DUVIDAS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" (click)="setRouter('login');">LOGIN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" (click)="setRouter('login');">CADASTRO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">CONTATOS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-10 align-self-end">
+                    <!-- <h1 class="text-uppercase text-white font-weight-bold">
+                        TRILHA BR
+                    </h1> -->
+                    <img class="imgLogo" src="../../../assets/img/icons/trilha-router.jpeg" alt="">
+
+                    <hr class="divider my-4">
+                    <hr class="divider my-4">
+
+                </div>
+                <div class="col-lg-12 align-self-baseline">
+                    <p class="text-white-75 font-weight-light mb-5">
+                        Montamos um roteiro especial para você aprovieitar o máximo de sua viagem,
+                        baseado em um valor acessível que cabe no seu bolso.
+                        Que tal começar agora essa experiência fantástica ?
+                    </p>
+
+                    <form>
+                        <div class="row bloco-inputs">
+                            <div class="col-md-2">
+                                <input type="text" class="form-control" placeholder="Valor">
+                            </div>
+
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" placeholder="Local Desejado">
+                            </div>
+
+                            <div class="col-md-2">
+                                <input type="text" class="form-control" placeholder="Entrada __/__/__">
+                            </div>
+
+                            <div class="col-md-2">
+                                <input type="text" class="form-control" placeholder="Saída __/__/__">
+                            </div>
+
+                            <div class="col-md-1">
+                                <a class="btn btn-primary btn-sl" (click)="setRouter('rotas')">Buscar</a>
+                            </div>
+                        </div>
+
+                    </form>
+
+                    <!-- <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a> -->
+                </div>
+            </div>
+
+            <!-- Marketing Icons Section -->
+            <div class="row">
+                <div class="col-lg-12 mb-4 center">
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Sobre -->
+    <section class="page-section bg-cz" id="about">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="text-white bg-cz-txt mt-0">Como utilizar o Trilha BR ?</h2>
+                    <hr class="divider self my-4">
+                    <p class="text-white-50 mb-4 bg-cz-txt ">
+                        O Trilha BR você monta para você um roteiro perfeito
+                        para a sua viagem, indicando lugares fantásticos e claro, tudo com um valor bem acessível
+                        baseado
+                        no que você tem disponível. Assim, você poderá aproveitar cada momento de sua viagem sem deixar
+                        de conhecer
+                        vários locais especiais!
+                    </p>
+                    <a class="btn btn-secondary btn-xl js-scroll-trigger" href="#services">Saiba Mais!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiências -->
+    <section class="page-section" id="services">
+        <div class="container">
+            <h2 class="text-center mt-0">Experiências</h2>
+            <hr class="divider my-4">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <i class="fas fa-4x fa-dollar-sign text-primary mb-4"></i>
+                        <h3 class="h4 mb-2">Gaste menos</h3>
+                        <p class="text-muted mb-0">Conheça vários lugares sem precisar gastar mais por isso!</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <i class="fas fa-4x fa-map text-primary mb-4"></i>
+                        <h3 class="h4 mb-2">Veja seu roteiro no mapa</h3>
+                        <p class="text-muted mb-0">Veja no mapa sugestões para seu roteiro.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <i class="fas fa-4x fa-users text-primary mb-4"></i>
+                        <h3 class="h4 mb-2">Compartilhe Experiências</h3>
+                        <p class="text-muted mb-0">Compartilhe seus roteiros com seus amigos!</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <i class="fas fa-4x fa-history text-primary mb-4"></i>
+                        <h3 class="h4 mb-2">Histórico</h3>
+                        <p class="text-muted mb-0">Que tal manter um histórico de seus roteiros?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fotos -->
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+    </section>
+
+
+    <!-- Download -->
+    <section class="page-section bg-dark text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Baixe o nosso aplicativo nas seguintes plataformas!</h2>
+            <p class="mb-4">Tenha a experiência na palma de sua mão!<p>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-4">
+                            <i class="btn-light btn-xl fas">
+                                <img src="../../../assets/img/icons/apple-28.png" alt="">
+                                Apple Store
+                            </i>
+                        </div>
+                        <div class="col-md-4">
+                            <i class="btn-light btn-xl fas">
+                                <img src="../../../assets/img/icons/android-24.png" alt="">
+                                Play Store
+                            </i>
+                        </div>
+                    </div>
+        </div>
+    </section>
+
+    <!-- Redes Sociais -->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2>Siga as nossas redes sociais</h2>
+                    <hr class="divider my-4">
+                    <p class="text-muted mb-5">
+                        Junte-se a nós e compartilhe as suas experiências em nossas
+                        redes sociais e com os seus amigos, veja os depoimentos e comentários de quem
+                        já utiliza nossas
+                        plataformas!
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                    <i class="icon-redes">
+                        <img src="../../../assets/img/icons/icons-instagram.png" alt="">
+                    </i>
+                    <a class="d-block" href="mailto:contact@yourwebsite.com">Instagran</a>
+                </div>
+                <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                    <i class="fas">
+                        <img src="../../../assets/img/icons/icons-facebook.png" alt="">
+                    </i>
+                    <a class="d-block" href="mailto:contact@yourwebsite.com">Facebook</a>
+                </div>
+                <div class="col-lg-4 mr-auto text-center">
+                    <i class="fas">
+                        <img src="../../../assets/img/icons/icons-gmail.png" alt="">
+                    </i>
+                    <a class="d-block" href="mailto:contact@yourwebsite.com">trilhaBr@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light py-5">
+        <div class="container">
+            <div class="small text-center text-muted">Copyright &copy; 2019 - Trilhosos</div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../../../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../../../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../../../assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../../../assets/js/creative.js"></script>
+
+</div>

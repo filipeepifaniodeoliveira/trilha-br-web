@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "226429236085",
+    "firebase_url": "https://trilha-br.firebaseio.com",
+    "project_id": "trilha-br",
+    "storage_bucket": "trilha-br.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226429236085:android:65f370330e79afe3d3593c",
+        "android_client_info": {
+          "package_name": "tech.makanstudio.trilha_br"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "226429236085-mrgrfaof4teqqe0rfgpfcmtb0ae14e5i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tech.makanstudio.trilha_br",
+            "certificate_hash": "b44d1962aa1eb4114023f3481cb05e26e534a657"
+          }
+        },
+        {
+          "client_id": "226429236085-g4m6pdm4rh7vrijt9qnlpmvpe2udufnp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdBnZKLYqrKWPQhn-P9IpFXUp7w4BXe4o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "226429236085-g4m6pdm4rh7vrijt9qnlpmvpe2udufnp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "226429236085-vl6kvi3sb9sgffkahc7dhuhnfeu92eq6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "tech.makanstudio.trilhaBr"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

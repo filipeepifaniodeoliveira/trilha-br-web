@@ -1,0 +1,175 @@
+.container {
+
+}
+.row {
+    /* width: 100%; */
+    /* margin-right: 50px; */
+    margin-left: 2px;
+    margin-right: 0px;
+}
+
+.header {
+    background-color: #3175b1;
+    height: 70px;
+    /* margin-left: 2px; */
+}
+
+.bcButton {
+    width: 270px;
+    height: 150px;
+}
+
+.bg-light {
+    background-color: black;
+}
+
+.navFonts {
+    font-size: 16px !important;
+}
+
+.title {
+    font-family: 'Varela Round';
+    margin-top: 90px;
+    color: white;
+    font-size: 32px;
+    line-height: 2.5rem;
+    letter-spacing: 0.8rem;
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    /* -webkit-text-fill-color: transparent; */
+    -webkit-background-clip: text;
+}
+
+@media only screen and (max-width: 600px) {
+    .title {
+        margin-top: 60px;
+    }
+  }
+
+.subTitle {
+    margin-top: 105px;
+    font-family: 'Nunito';
+    font-size: 18px;
+    letter-spacing: 0.0625em;
+    color: #000;
+    /* text-shadow: 1px 1px 1px #1f2224; */
+    text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    text-decoration-color: black;
+}
+
+@media only screen and (max-width: 600px) {
+    .subTitle {
+        margin-top: 40px;
+    }
+}
+
+.center {
+    margin-top: 80px;
+    font-family: 'Helvetica Neue';
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+    .center {
+        margin-top: 60px;
+    }
+}
+
+.center label{
+    font-size: 16px;
+}
+
+
+.inputAdapter {
+    font-family: 'Helvetica Neue';
+    width: 310px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.btn-search {
+    margin-top: 20px;
+}
+
+.bloco-local {
+    font-family: 'Nunito';
+    /* margin-left: -55px; */
+}
+
+.hrs {
+    background-color: transparent;
+}
+
+.bloco-inputs input {
+    padding: 25px;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Arial";
+    border-radius: 5px;
+    color: #37454d;
+    height: 44px;
+    /* font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+    /* font-size: 16px; */
+}
+
+.bloco-inputs a {
+    color: azure !important;
+}
+
+.btn-sl {
+    /* padding: 25px !important;   */
+    padding: 13px !important;
+    width: 120px;
+    border-radius: 5px !important;
+    color: azure !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .bloco-inputs input {
+        text-align: center;
+        margin-bottom: 6px;
+    }
+
+    .btn-sl {
+        /* padding: 25px !important;   */
+        margin-top: 5px;
+        color: azure !important;
+    }
+
+    .bloco-inputs a {
+        color: azure !important;
+    }
+    
+}
+
+.bg-cz {
+    background-color: #f8f9fa;
+}
+
+.bg-cz-txt {
+    color: #6c757d!important;
+}
+
+.hr.light {
+    border-color: rgba(106, 133, 255, 0.8) !important;
+}
+
+.imgLogo {
+    margin-top: 20px;
+    border-radius: 50px;
+    width: 35%;
+}
+
+@media only screen and (max-width: 600px) {
+    .imgLogo {
+        max-width: 200px; max-height: 150px;
+        border-radius: 4px;
+    }
+}

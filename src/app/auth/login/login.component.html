@@ -1,0 +1,97 @@
+<div id="page-top">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container">
+      <!-- <i class="navbar-brand js-scroll-trigger">
+          <img src="../../../assets/img/icons/logo-trilha2.png" alt="">
+      </i> -->
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">TRILHA BR</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" (click)="setRouter('home');">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" (click)="setRouter('sobre');">SOBRE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" (click)="setRouter('contatos');">CONTATOS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="areaLogin">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center justify-content-center text-center">
+        <div class="col-lg-10 align-self-end">
+          
+          <div class="container" *ngIf="actionComponent == 'login'">
+            <div class="login">
+              <div class="login-triangle"></div>
+          
+              <h2 class="login-header">Log in</h2>
+          
+              <form #frmLogin="ngForm" class="login-container" (ngSubmit)="onLogin(frmLogin)">
+                <p>
+                  <input type="email" name="email" placeholder="Email" ngModel required>
+                </p>
+                <p>
+                  <input type="password" name="password" placeholder="Password" ngModel required>
+                </p>
+                <div class="btns">
+                  <button type="button" class="btns-login login-comum">Login</button>
+                </div>
+                <div class="btns">
+                  <button type="button" class="btns-login login-facebook">Login com Facebook</button>
+                </div>
+                <div class="btns">
+                  <button type="button" class="btns-login login-gmail">Login com Google</button>
+                </div>
+                <p>
+                  <a class="btn-cadastro" (click)="setAction('cadastro');"><u>Cadastre-se</u></a>
+                </p>
+              </form>
+
+            </div>
+          </div>
+          
+          
+          <div class="container" *ngIf="actionComponent == 'cadastro'">
+            <div class="login">
+              <div class="login-triangle"></div>
+          
+              <h2 class="login-header">Realize seu Cadastro</h2>
+          
+              <form #frmRegister="ngForm" class="login-container" (ngSubmit)="onRegister(frmRegister)">
+                <p>
+                  <input type="text" name="name" placeholder="Name" ngModel required>
+                </p>
+                <p>
+                  <input type="email" name="email" placeholder="Email" ngModel required>
+                </p>
+                <p>
+                  <input type="password" name="password" placeholder="Password" ngModel required>
+                </p>
+                <p>
+                  <input type="submit" value="Register">
+                </p>
+                <p>
+                  <input type="submit" value="Login" (click)="setAction('login');">
+                </p>
+              </form>
+            </div>
+          </div> 
+
+        </div>
+      </div>
+    </div>
+  </header>
+</div>

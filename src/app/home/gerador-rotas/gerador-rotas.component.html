@@ -1,0 +1,245 @@
+<div id="page-top">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container">
+      <!-- <i class="navbar-brand js-scroll-trigger">
+              <img src="../../../assets/img/icons/logo-trilha2.png" alt="">
+          </i> -->
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">TRILHA BR</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse navFonts" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" (click)="setRouter('home');">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" (click)="setRouter('sobre');">SOBRE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">DUVIDAS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">CONTATOS</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container h-10">
+      <div class="row h-100 align-items-center justify-content-center text-center">
+        <div class="col-lg-10 align-self-end">
+
+          <hr class="divider my-4">
+
+          <img class="imgLogo" src="../../../assets/img/icons/trilha-router.jpeg" alt="">
+
+          <hr class="divider my-4">
+          <hr class="divider my-4">
+
+        </div>
+        <div class="col-lg-8 align-self-baseline">
+          <p class="text-white-75 font-weight-light mb-5">
+            Selecione na lista a rota ideal para a sua viagem e
+            observe no mapa os pontos sugestivos para a sua rota.
+          </p>
+
+          <div class="row h-40 align-items-center justify-content-center text-center">
+            <!-- <div id="map-container-google-1" class="z-depth-1-half map-container">
+              <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                frameborder="0" class="bloco-mapa" allowfullscreen>
+              </iframe>
+            </div> -->
+          </div>
+
+          <hr class="divider my-4">
+
+        </div>
+        <div class="row">
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
+                <div class="tile">
+                  <div class="wrapper">
+                    <div class="header">Roteiro</div>
+
+                    <div class="banner-img">
+                      <img src="../../../assets/img/gramado-neve.jpg" alt="Image 1">
+                    </div>
+
+                    <div class="dates">
+                      <div class="start">
+                        <strong>Início</strong> 16/05/2020
+                        <span></span>
+                      </div>
+                      <div class="ends">
+                        <strong>Final</strong> 20/05/2020
+                      </div>
+                    </div>
+
+                    <div class="stats">
+
+                      <div>
+                        <strong>Locais</strong> 9
+                      </div>
+
+                      <div>
+                        <strong>Restaurantes</strong> 4
+                      </div>
+
+                      <div>
+                        <strong>Eventos</strong> 3
+                      </div>
+
+                    </div>
+
+                    <div class="footer">
+                      <a class="Cbtn Cbtn-primary" (click)="setRouter('detalhe');">Veja</a>
+                      <a class="Cbtn Cbtn-danger">Compre</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
+                <div class="tile">
+                  <div class="wrapper">
+                    <div class="header">Roteiro</div>
+
+                    <div class="banner-img">
+                      <img src="../../../assets/img/gramado-neve.jpg" alt="Image 1">
+                    </div>
+
+                    <div class="dates">
+                      <div class="start">
+                        <strong>Início</strong> 16/05/2020
+                        <span></span>
+                      </div>
+                      <div class="ends">
+                        <strong>Final</strong> 20/05/2020
+                      </div>
+                    </div>
+
+                    <div class="stats">
+                      <div>
+                        <strong>Locais</strong> 9
+                      </div>
+
+                      <div>
+                        <strong>Restaurantes</strong> 4
+                      </div>
+
+                      <div>
+                        <strong>Eventos</strong> 3
+                      </div>
+                    </div>
+
+                    <div class="footer">
+                      <a href="#" class="Cbtn Cbtn-primary" (click)="setRouter('detalhe');">Veja</a>
+                      <a href="#" class="Cbtn Cbtn-danger">Compre</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
+                <div class="tile">
+                  <div class="wrapper">
+                    <div class="header">Roteiro</div>
+
+                    <div class="banner-img">
+                      <img src="../../../assets/img/gramado-neve.jpg" alt="Image 1">
+                    </div>
+
+                    <div class="dates">
+                      <div class="start">
+                        <strong>Início</strong> 16/05/2020
+                        <span></span>
+                      </div>
+                      <div class="ends">
+                        <strong>Final</strong> 20/05/2020
+                      </div>
+                    </div>
+
+                    <div class="stats">
+
+                      <div>
+                        <strong>Locais</strong> 9
+                      </div>
+
+                      <div>
+                        <strong>Restaurantes</strong> 4
+                      </div>
+
+                      <div>
+                        <strong>Eventos</strong> 3
+                      </div>
+
+                    </div>
+
+                    <div class="footer">
+                      <a href="#" class="Cbtn Cbtn-primary" (click)="setRouter('detalhe');">Veja</a>
+                      <a href="#" class="Cbtn Cbtn-danger">Compre</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="col-4 cards">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="../../../assets/img/gramado-01.jpg" alt="Imagem de capa do card">
+              <div class="card-body">
+                <h6 class="card-title">Visite <b>6</b> Locais</h6>
+                <h6 class="card-title">Custo aproximado de <b>120,00 R$</b></h6>
+                <button class="btn btn-primary" (click)="setRouter('detalhe');">Veja este Roteiro</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 cards">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="../../../assets/img/gramado-01.jpg" alt="Imagem de capa do card">
+              <div class="card-body">
+                <h6 class="card-title">Visite <b>6</b> Locais</h6>
+                <h6 class="card-title">Custo aproximado de <b>120,00 R$</b></h6>
+                <button class="btn btn-primary" (click)="setRouter('detalhe');">Veja esse roteiro</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 cards">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="../../../assets/img/gramado-01.jpg" alt="Imagem de capa do card">
+              <div class="card-body">
+                <h6 class="card-title">Visite <b>6</b> Locais</h6>
+                <h6 class="card-title">Custo aproximado de <b>120,00 R$</b></h6>
+                <button class="btn btn-primary" (click)="setRouter('detalhe');">Veja esse roteiro</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 cards">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="../../../assets/img/gramado-01.jpg" alt="Imagem de capa do card">
+              <div class="card-body">
+                <h6 class="card-title">Visite <b>6</b> Locais</h6>
+                <h6 class="card-title">Custo aproximado de <b>120,00 R$</b></h6>
+                <button class="btn btn-primary" (click)="setRouter('detalhe');">Veja esse roteiro</button>
+              </div>
+            </div>
+          </div> -->
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </header>
+</div>
