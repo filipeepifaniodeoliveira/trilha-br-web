@@ -1,6 +1,9 @@
   .image-row {
     display: flex;
     flex-wrap: wrap;
+
+    padding: 5px 10px 5px 10px !important;
+    background-color: black !important;
   }
 
   .image-row > .image-column {

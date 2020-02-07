@@ -1,6 +1,6 @@
+import { AuthenticationService } from './../../auth/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/auth/services/auth.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -10,18 +10,28 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class HomeComponent implements OnInit {
 
+  usuario: any = {};
+
   constructor(
     private router: Router,
-    private authService: AuthService,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private authService: AuthenticationService, 
   ) { }
 
   ngOnInit() {
-    console.log('LOGAMOS');
+    this.usuario = JSON.parse(localStorage.getItem("user"));
   }
 
-  logout() {
-    this.authService.logout();
+  // SignOut Firebase Session and Clean LocalStorage
+  logoutUser() {
+    this.authService.logout()
+      .then(res => {
+        console.log(res);
+        localStorage.removeItem('user');
+      }, err => {
+        // this.showMessage("danger", err.message);
+        console.log("danger", err.message);
+      });
   }
 
   setRouter(key) {
@@ -40,15 +50,5 @@ export class HomeComponent implements OnInit {
     }
   }
 
-
-  // openFormModal() {
-  //   const modalRef = this.modalService.open(ModalLoginComponent);
-    
-  //   modalRef.result.then((result) => {
-  //     console.log(result);
-  //   }).catch((error) => {
-  //     console.log(error);
-  //   });
-  // }
 
 }

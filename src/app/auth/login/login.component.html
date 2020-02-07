@@ -32,64 +32,77 @@
     <div class="container h-100">
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
-          
-          <div class="container" *ngIf="actionComponent == 'login'">
+          <div class="container">
             <div class="login">
-              <div class="login-triangle"></div>
-          
-              <h2 class="login-header">Log in</h2>
-          
-              <form #frmLogin="ngForm" class="login-container" (ngSubmit)="onLogin(frmLogin)">
-                <p>
-                  <input type="email" name="email" placeholder="Email" ngModel required>
-                </p>
-                <p>
-                  <input type="password" name="password" placeholder="Password" ngModel required>
-                </p>
-                <div class="btns">
-                  <button type="button" class="btns-login login-comum">Login</button>
-                </div>
-                <div class="btns">
-                  <button type="button" class="btns-login login-facebook">Login com Facebook</button>
-                </div>
-                <div class="btns">
-                  <button type="button" class="btns-login login-gmail">Login com Google</button>
-                </div>
-                <p>
-                  <a class="btn-cadastro" (click)="setAction('cadastro');"><u>Cadastre-se</u></a>
-                </p>
-              </form>
+              <div class="row">
+                <div id="logreg-forms">
+                  <div [hidden]="actionComponent !== 'login'">
+                    <form class="form-signin">
+                      <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
+                      <div class="social-login">
+                        <button class="btn facebook-btn social-btn" type="button"><span>
+                          <i class="fab fa-facebook-f"></i> Sign in with Facebook</span> 
+                        </button>
+                        <button class="btn google-btn social-btn" type="button" (click)="googleLogin()">
+                          <span>
+                          <i class="fab fa-google-plus-g"></i> Sign in with Google+</span> 
+                        </button>
+                      </div>
+                      <p style="text-align:center"> OR </p>
+                      <input type="email" [(ngModel)]="emailInput" name="email" id="email" class="form-control" placeholder="Email address" required="" autofocus="">
+                      <input type="password" [(ngModel)]="passwordInput" name="password" id="password" placeholder="Password" class="form-control" placeholder="Password" required="">
+                      <button class="btn btn-success btn-block" type="submit" (click)="loginUser()">
+                        <i class="fas fa-sign-in-alt"></i> Sign in
+                      </button>
+                      <a (click)="setAction('reset');" id="forgot_pswd">Forgot password?</a>
+                      <hr>
+                      <!-- <p>Don't have an account!</p>  -->
+                      <button class="btn btn-primary btn-block" type="button" id="btn-signup"
+                        (click)="setAction('signup');">
+                        <i class="fas fa-user-plus"></i> Sign up New Account
+                      </button>
+                    </form>
+                  </div>
 
+                  <div [hidden]="actionComponent !== 'reset'">
+                    <form class="form-reset">
+                      <input type="email" [(ngModel)]="emailInput" name="email" id="email" class="form-control" placeholder="Email address" required="" autofocus="">
+                      <button class="btn btn-primary btn-block" type="submit" (click)="forgotPassword()">Reset Password</button>
+                      <a (click)="setAction('login');" id="cancel_reset"><i class="fas fa-angle-left"></i> Back</a>
+                    </form>
+                  </div>
+
+                  <div [hidden]="actionComponent !== 'signup'">
+                    <form class="form-signup">
+                      <div class="social-login">
+                        <button class="btn facebook-btn social-btn" type="button"><span>
+                          <i class="fab fa-facebook-f"></i> Sign up with Facebook</span> 
+                        </button>
+                      </div>
+                      <div class="social-login">
+                        <button class="btn google-btn social-btn" type="button" (click)="googleLogin()">
+                          <span><i class="fab fa-google-plus-g"></i> Sign up with Google+</span> 
+                        </button>
+                      </div>
+
+                      <p style="text-align:center">OR</p>
+
+                      <input type="text" [(ngModel)]="userName" name="userName" id="userName1" class="form-control" placeholder="Full name" required="" autofocus="">
+                      <input type="email" [(ngModel)]="userEmail" name="userEmail" id="userEmail1" class="form-control" placeholder="Email address" required autofocus="">
+                      <input type="password" [(ngModel)]="userPassword" name="userPassword" id="userPassword1" class="form-control" placeholder="Password" required autofocus="">
+                      <input type="password" [(ngModel)]="userPasswordRepeat" name="userPasswordRepeat" id="userPasswordRepeat1" class="form-control" placeholder="Repeat Password" required autofocus="">
+
+                      <button class="btn btn-primary btn-block" type="submit" (click)="registerUser()">
+                        <i class="fas fa-user-plus"></i> Sign Up
+                      </button>
+                      <a (click)="setAction('login');" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
+                    </form>
+                    <br>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          
-          
-          <div class="container" *ngIf="actionComponent == 'cadastro'">
-            <div class="login">
-              <div class="login-triangle"></div>
-          
-              <h2 class="login-header">Realize seu Cadastro</h2>
-          
-              <form #frmRegister="ngForm" class="login-container" (ngSubmit)="onRegister(frmRegister)">
-                <p>
-                  <input type="text" name="name" placeholder="Name" ngModel required>
-                </p>
-                <p>
-                  <input type="email" name="email" placeholder="Email" ngModel required>
-                </p>
-                <p>
-                  <input type="password" name="password" placeholder="Password" ngModel required>
-                </p>
-                <p>
-                  <input type="submit" value="Register">
-                </p>
-                <p>
-                  <input type="submit" value="Login" (click)="setAction('login');">
-                </p>
-              </form>
-            </div>
-          </div> 
-
         </div>
       </div>
     </div>

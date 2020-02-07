@@ -1,97 +1,52 @@
-import { JwtResponseI } from './../interfaces/jwt-response';
-import { UserI } from './../interfaces/user';
-import { HttpClientModule, HttpClient, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { tap, mapTo } from 'rxjs/operators';
-import { Observable, BehaviorSubject } from 'rxjs';
-import { TokenInterceptor } from '../token.interceptor';
+import { Router } from "@angular/router";
+import { auth } from 'firebase/app';
+import { AngularFireAuth } from "@angular/fire/auth";
+
+
+// id cliente: 252872824208-vd2tj2od4vjooim054chkc9g6l0mebt6.apps.googleusercontent.com
+// chave secret : -oI_ay3UlPYbclitJFs4gvuG
 
 @Injectable()
-export class AuthService {
+export class AuthenticationService {
 
-  AUTH_SERVER: string = 'http://localhost:3000';
-  authSubject = new BehaviorSubject(false);
-  private token: string;
-  public requestModel: HttpRequest<any>;
-  constructor(
-    private httpClient: HttpClient
-  ) { }
-
-  register(user : UserI): Observable<JwtResponseI> {
-    return this.httpClient.post<JwtResponseI>(`${this.AUTH_SERVER}/register`, user)
-      .pipe(tap(
-        (res: JwtResponseI) => {
-          if (res) {
-            this.storeTokens(res.dataUser);
-          }
-        }
-      ))
-  }
-
-  login (user : UserI): Observable<JwtResponseI> {
-    return this.httpClient.post<JwtResponseI>(`${this.AUTH_SERVER}/login`, user)
-      .pipe(
-        tap((res: JwtResponseI) => {
-          if (res) {
-            this.storeTokens(res.dataUser);
-          }
-        },
-        mapTo(true),
-      ))
-  }
-
-  logout(): void {
-    this.token = '';
-    this.removeTokens();
-  }
-
-  private storeTokens(data) {
-    localStorage.setItem('dataLocal', JSON.stringify({
-      token: data.accessToken,
-      id: data.id,
-      name: data.name,
-      expires: data.expiresIn
-    }));
-    this.token = data.token;
-  }
-
-  getJwtToken():string {
-    let data: any = {};
-    if (!this.token) {
-      data = JSON.parse(localStorage.getItem("dataLocal"));
-      if (data) {
-        this.token = data.accessToken;
-        this.addToken(this.requestModel, data.accessToken)
+  constructor( public angularFireAuth: AngularFireAuth, public router: Router ) {
+    this.angularFireAuth.authState.subscribe(userResponse => {
+      if (userResponse) {
+        localStorage.setItem('user', JSON.stringify(userResponse));
+      } else {
+        localStorage.setItem('user', null);
       }
-    }
-    return this.token;
+    })
   }
 
-  removeTokens() {
-    localStorage.clear();
-    localStorage.removeItem("dataLocal");
+  async login(email: string, password: string) {
+    return await this.angularFireAuth.auth.signInWithEmailAndPassword(email, password);
   }
 
-  refreshToken() {
-    // return this.http.post<any>(`${config.apiUrl}/refresh`, {
-    //   'refreshToken': this.getRefreshToken()
-    // }).pipe(tap((tokens: Tokens) => {
-    //   this.storeJwtToken(tokens.jwt);
-    // }));
+  async register(userName: string, email: string, password: string) {
+    return await this.angularFireAuth.auth.createUserWithEmailAndPassword(email, password)
   }
 
-  saveRequest(request) {
-    this.requestModel = request;
+  async sendEmailVerification() {
+    return await this.angularFireAuth.auth.currentUser.sendEmailVerification();
   }
 
-  addToken(request: HttpRequest<any>, token: string) {
-    return request.clone({
-        setHeaders: {
-            'Authorization': `Bearer ${token}`
-        }
-    });
-}
+  async sendPasswordResetEmail(passwordResetEmail: string) {
+    return await this.angularFireAuth.auth.sendPasswordResetEmail(passwordResetEmail);
+  }
 
+  async logout() {
+    return await this.angularFireAuth.auth.signOut();
+  }
+
+  isUserLoggedIn() {
+    return JSON.parse(localStorage.getItem('user'));
+  }
+
+  async loginWithGoogle() {
+    return await this.angularFireAuth.auth.signInWithPopup(new auth.GoogleAuthProvider())
+  }
 
 
 }

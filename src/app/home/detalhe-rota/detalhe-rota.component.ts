@@ -1,3 +1,4 @@
+import { AuthenticationService } from './../../auth/services/auth.service';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -14,7 +15,8 @@ export class DetalheRotaComponent implements OnInit {
   images: any = [];
 
   constructor(
-    private router: Router
+    private router: Router,
+    private authService: AuthenticationService, 
   ) {
 
   }
@@ -76,6 +78,18 @@ export class DetalheRotaComponent implements OnInit {
   }
 
   clickImg() {
+  }
+
+  // SignOut Firebase Session and Clean LocalStorage
+  logoutUser() {
+    this.authService.logout()
+      .then(res => {
+        console.log(res);
+        localStorage.removeItem('user');
+      }, err => {
+        // this.showMessage("danger", err.message);
+        console.log("danger", err.message);
+      });
   }
 
 }

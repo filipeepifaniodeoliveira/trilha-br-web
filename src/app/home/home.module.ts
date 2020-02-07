@@ -5,13 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home/home.component';
-import { AuthService } from '../auth/services/auth.service';
+import { AuthenticationService  } from '../auth/services/auth.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GeradorRotasComponent } from './gerador-rotas/gerador-rotas.component';
 import { DetalheRotaComponent } from './detalhe-rota/detalhe-rota.component';
-import { ImageLightboxComponent } from './image-lightbox/image-lightbox.component';
-import { ListaRoteiroComponent } from './lista-roteiro/lista-roteiro.component';
-import { CarrouselRoteiroComponent } from './carrousel-roteiro/carrousel-roteiro.component';
+import { ListaRoteiroComponent } from './commons/lista-roteiro/lista-roteiro.component';
+import { ImageLightboxComponent } from './commons/image-lightbox/image-lightbox.component';
+import { CarrouselRoteiroComponent } from './commons/carrousel-roteiro/carrousel-roteiro.component';
 
 
 @NgModule({
@@ -20,14 +20,14 @@ import { CarrouselRoteiroComponent } from './carrousel-roteiro/carrousel-roteiro
   ],
   imports: [
     CommonModule,
-    FormsModule,
     NgbModule,
     HomeRoutingModule,
     HttpClientModule,
     SharedModule,
+    FormsModule
   ],
   providers: [
-     AuthService]
-
+    AuthenticationService
+  ]
 })
 export class HomeModule { }
