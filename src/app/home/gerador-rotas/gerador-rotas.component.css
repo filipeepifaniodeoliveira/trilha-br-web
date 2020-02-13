@@ -26,7 +26,13 @@ body {
 }
 
 
-.header {
+.header1 {
+    background-color: #31b146;
+    height: 70px;
+    /* margin-left: 2px; */
+}
+
+.header2 {
     background-color: #3175b1;
     height: 70px;
     /* margin-left: 2px; */

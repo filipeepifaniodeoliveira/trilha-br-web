@@ -5,11 +5,11 @@ import { Router } from '@angular/router';
 declare var $: any;
 
 @Component({
-  selector: 'app-detalhe-rota',
-  templateUrl: './detalhe-rota.component.html',
-  styleUrls: ['./detalhe-rota.component.css']
+  selector: 'app-detalhe-rota2',
+  templateUrl: './detalhe-rota2.component.html',
+  styleUrls: ['./detalhe-rota2.component.css']
 })
-export class DetalheRotaComponent implements OnInit {
+export class DetalheRota2Component implements OnInit {
 
   galleryId = 'myLightbox';
   images: any = [];
@@ -17,7 +17,7 @@ export class DetalheRotaComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private authService: AuthenticationService, 
+    private authService: AuthenticationService,
   ) {
 
   }
@@ -94,5 +94,4 @@ export class DetalheRotaComponent implements OnInit {
         console.log("danger", err.message);
       });
   }
-
 }

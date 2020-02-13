@@ -99,6 +99,12 @@
                     </form>
                     <br>
                   </div>
+
+                  <div class="alert alert-{{responseMessageType}}" role="alert"
+                    *ngIf="responseMessage.length">
+                    {{responseMessage}}
+                  </div>
+                  
                 </div>
               </div>
             </div>

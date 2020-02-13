@@ -19,7 +19,7 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#services">DUVIDAS</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="isLogado$">
             <a class="nav-link js-scroll-trigger Cbtn Cbtn-danger" (click)="logoutUser();">SAIR</a>
           </li>
         </ul>
@@ -32,26 +32,19 @@
     <div class="container h-10">
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
-
           <hr class="divider my-4">
-
           <img class="imgLogo" src="../../../assets/img/icons/trilha-router.jpeg" alt="">
-
           <hr class="divider my-4">
           <hr class="divider my-4">
-
         </div>
         <div class="col-lg-8 align-self-baseline">
           <p class="text-white-75 font-weight-light mb-5">
             Selecione na lista a rota ideal para a sua viagem e
             observe no mapa os pontos sugestivos para a sua rota.
           </p>
-
           <div class="row h-40 align-items-center justify-content-center text-center">
           </div>
-
           <hr class="divider my-4">
-
         </div>
         <div class="row">
 
@@ -60,11 +53,14 @@
               <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
                 <div class="tile">
                   <div class="wrapper">
-                    <div class="header">Roteiro</div>
+                    <div class="header header1">Roteiro de 3 Dias</div>
 
                     <div class="banner-img">
                       <img src="../../../assets/img/gramado-neve.jpg" alt="Image 1">
                     </div>
+
+                    <hr>
+                    <div class="">Gramado/RS</div>
 
                     <div class="dates">
                       <div class="start">
@@ -72,22 +68,25 @@
                         <span></span>
                       </div>
                       <div class="ends">
-                        <strong>Final</strong> 20/05/2020
+                        <strong>Final</strong> 19/05/2020
                       </div>
                     </div>
+
+                    <div class=""><h5 style="color: darkgreen;">Valor: 1.000 R$</h5></div>
+                    <hr>
 
                     <div class="stats">
 
                       <div>
-                        <strong>Locais</strong> 9
+                        <strong>Locais</strong> 7
                       </div>
 
                       <div>
-                        <strong>Restaurantes</strong> 4
+                        <strong>Restaurantes</strong> 3
                       </div>
 
                       <div>
-                        <strong>Eventos</strong> 3
+                        <strong>Passeios</strong> 4
                       </div>
 
                     </div>
@@ -103,11 +102,14 @@
               <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
                 <div class="tile">
                   <div class="wrapper">
-                    <div class="header">Roteiro</div>
+                    <div class="header header2">Roteiro de 4 dias</div>
 
                     <div class="banner-img">
                       <img src="../../../assets/img/gramado-neve.jpg" alt="Image 1">
                     </div>
+
+                    <hr>
+                    <div class="">Gramado/RS</div>
 
                     <div class="dates">
                       <div class="start">
@@ -119,23 +121,27 @@
                       </div>
                     </div>
 
+                    <div class=""><h5 style="color: brown;">Valor: 1.500 R$</h5></div>
+                    <hr>
+
                     <div class="stats">
                       <div>
-                        <strong>Locais</strong> 9
+                        <strong>Locais</strong> 8
                       </div>
 
                       <div>
-                        <strong>Restaurantes</strong> 4
+                        <strong>Restaurantes</strong> 3
                       </div>
 
                       <div>
-                        <strong>Eventos</strong> 3
+                        <strong>Passeios</strong> 5
                       </div>
+
                     </div>
 
                     <div class="footer">
-                      <a href="#" class="Cbtn Cbtn-primary" (click)="setRouter('detalhe');">Veja</a>
-                      <a href="#" class="Cbtn Cbtn-danger">Compre</a>
+                      <a class="Cbtn Cbtn-primary" (click)="setRouter('detalhe2');">Veja</a>
+                      <a class="Cbtn Cbtn-danger">Compre</a>
                     </div>
                   </div>
                 </div>
@@ -144,11 +150,14 @@
               <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
                 <div class="tile">
                   <div class="wrapper">
-                    <div class="header">Roteiro</div>
+                    <div class="header header2">Roteiro 4 dias</div>
 
                     <div class="banner-img">
                       <img src="../../../assets/img/gramado-neve.jpg" alt="Image 1">
                     </div>
+
+                    <hr>
+                    <div class="">Gramado/RS</div>
 
                     <div class="dates">
                       <div class="start">
@@ -160,25 +169,28 @@
                       </div>
                     </div>
 
+                    <div class=""><h5 style="color: brown;">Valor: 1.800 R$</h5></div>
+                    <hr>
+
                     <div class="stats">
 
-                      <div>
-                        <strong>Locais</strong> 9
-                      </div>
+                    <div>
+                      <strong>Locais</strong> 8
+                    </div>
+                    
+                    <div>
+                      <strong>Restaurantes</strong> 3
+                    </div>
 
-                      <div>
-                        <strong>Restaurantes</strong> 4
-                      </div>
-
-                      <div>
-                        <strong>Eventos</strong> 3
-                      </div>
+                    <div>
+                      <strong>Passeios</strong> 5
+                    </div>
 
                     </div>
 
                     <div class="footer">
-                      <a href="#" class="Cbtn Cbtn-primary" (click)="setRouter('detalhe');">Veja</a>
-                      <a href="#" class="Cbtn Cbtn-danger">Compre</a>
+                      <a class="Cbtn Cbtn-primary" (click)="setRouter('detalhe');">Veja</a>
+                      <a class="Cbtn Cbtn-danger">Compre</a>
                     </div>
                   </div>
                 </div>

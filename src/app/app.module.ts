@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
+import { AgmCoreModule } from '@agm/core';
 
 var config = {
   apiKey: "AIzaSyCSU6hRtcKIN2x5HmAT_yCWFZgOfMac6TE",

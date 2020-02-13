@@ -1,7 +1,6 @@
 import { AuthenticationService } from './../../auth/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import undefined = require('firebase/empty-import');
 
 @Component({
   selector: 'app-gerador-rotas',
@@ -11,6 +10,7 @@ import undefined = require('firebase/empty-import');
 export class GeradorRotasComponent implements OnInit {
 
   usuario: any = {};
+  isLogado$: boolean = false;
 
   constructor(
     private router: Router,
@@ -19,6 +19,12 @@ export class GeradorRotasComponent implements OnInit {
 
   ngOnInit() {
     this.usuario = JSON.parse(localStorage.getItem("user"));
+    
+    if (this.usuario != {} && this.usuario != undefined && this.usuario != null) {
+      this.isLogado$ = true;
+    } else {
+      this.isLogado$ = false;
+    }
   }
 
   setRouter(key) {
@@ -33,11 +39,15 @@ export class GeradorRotasComponent implements OnInit {
         this.router.navigateByUrl('/home/home');
         break;
       case "detalhe":
-        if (this.usuario != {} && this.usuario != undefined && this.usuario != null) {
-          this.router.navigateByUrl('/home/detalhe');
-        } else {
-          this.router.navigateByUrl('/auth/login');
-        }
+        // if (this.usuario != {} && this.usuario != undefined && this.usuario != null) {
+        //   this.router.navigateByUrl('/home/detalhe');
+        // } else {
+        //   this.router.navigateByUrl('/auth/login');
+        // }
+        this.router.navigateByUrl('/home/detalhe');
+        break;
+      case "detalhe2":
+        this.router.navigateByUrl('/home/detalhe2');
         break;
       default:
         break;
@@ -50,6 +60,8 @@ export class GeradorRotasComponent implements OnInit {
       .then(res => {
         console.log(res);
         localStorage.removeItem('user');
+        this.isLogado$ = false;
+        this.router.navigateByUrl('/home/home');
       }, err => {
         // this.showMessage("danger", err.message);
         console.log("danger", err.message);

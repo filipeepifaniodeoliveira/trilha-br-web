@@ -12,11 +12,14 @@ import { DetalheRotaComponent } from './detalhe-rota/detalhe-rota.component';
 import { ListaRoteiroComponent } from './commons/lista-roteiro/lista-roteiro.component';
 import { ImageLightboxComponent } from './commons/image-lightbox/image-lightbox.component';
 import { CarrouselRoteiroComponent } from './commons/carrousel-roteiro/carrousel-roteiro.component';
+import { MapsComponent } from './commons/maps/maps.component';
+import { AgmCoreModule } from '@agm/core';
+import { DetalheRota2Component } from './detalhe-rota2/detalhe-rota2.component';
 
 
 @NgModule({
   declarations: [ 
-    HomeComponent, GeradorRotasComponent, DetalheRotaComponent, ImageLightboxComponent, ListaRoteiroComponent, CarrouselRoteiroComponent,
+    HomeComponent, GeradorRotasComponent, DetalheRotaComponent, ImageLightboxComponent, ListaRoteiroComponent, CarrouselRoteiroComponent, MapsComponent, DetalheRota2Component,
   ],
   imports: [
     CommonModule,
@@ -24,7 +27,8 @@ import { CarrouselRoteiroComponent } from './commons/carrousel-roteiro/carrousel
     HomeRoutingModule,
     HttpClientModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    // AgmCoreModule
   ],
   providers: [
     AuthenticationService

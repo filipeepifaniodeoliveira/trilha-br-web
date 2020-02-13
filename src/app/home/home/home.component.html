@@ -19,10 +19,10 @@
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#services">DUVIDAS</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" *ngIf="isLogado$ == false">
                         <a class="nav-link js-scroll-trigger" (click)="setRouter('login');">LOGIN</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" *ngIf="isLogado$ == true">
                         <a class="nav-link js-scroll-trigger Cbtn Cbtn-danger" (click)="logoutUser();">SAIR</a>
                     </li>
                 </ul>

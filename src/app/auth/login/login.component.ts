@@ -105,18 +105,17 @@ export class LoginComponent implements OnInit {
   registerUser() {
     this.authService.register(this.userName, this.userEmail, this.userPassword)
       .then(res => {
-
         // Send Varification link in email
         this.authService.sendEmailVerification().then(res => {
           console.log(res);
           this.isForgotPassword = false;
+          this.actionComponent = 'login';
+          localStorage.removeItem('user');
           this.showMessage("success", "Registration Successful! Please Verify Your Email");
-          this.router.navigateByUrl('/auth/login');
         }, err => {
           this.showMessage("danger", err.message);
         });
-        this.isUserLoggedIn();
-        
+        // this.isUserLoggedIn();  
       }, err => {
         this.showMessage("danger", err.message);
       });

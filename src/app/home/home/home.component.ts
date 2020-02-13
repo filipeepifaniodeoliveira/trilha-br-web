@@ -11,6 +11,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class HomeComponent implements OnInit {
 
   usuario: any = {};
+  isLogado$: boolean = false;
 
   constructor(
     private router: Router,
@@ -20,6 +21,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.usuario = JSON.parse(localStorage.getItem("user"));
+
+    if (this.usuario != {} && this.usuario != undefined && this.usuario != null) {
+      this.isLogado$ = true;
+    } else {
+      this.isLogado$ = false;
+    }
   }
 
   // SignOut Firebase Session and Clean LocalStorage
@@ -28,6 +35,8 @@ export class HomeComponent implements OnInit {
       .then(res => {
         console.log(res);
         localStorage.removeItem('user');
+        this.isLogado$ = false;
+        this.router.navigateByUrl('/home/home');
       }, err => {
         // this.showMessage("danger", err.message);
         console.log("danger", err.message);
