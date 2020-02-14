@@ -1,42 +1,354 @@
+<div class="container lista-rubro">
+	<h6 class="section-title h1">Detalhamento do Roteiro</h6>
+	<table class="table table-hover table-dark">
+		<thead>
+			<tr>
+				<th scope="col">
+					<p class="alinhamento-title">Veja o Detalhamento para cada dia</p>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">
+					<p class="alinhamento" (click)="clickOnLine(1)"><u>Clique para ver o Detalhamento do Primeiro
+							Dia</u></p>
+					<table class="table table-borderless" *ngIf="line1 == true">
+						<thead>
+							<tr>
+								<th scope="col"></th>
+								<th scope="col">
+									<p class="detal-table">Local</p>
+								</th>
+								<th scope="col">
+									<p class="detal-table">Horário</p>
+								</th>
+								<th scope="col">
+									<p class="detal-table">Valor Aproximado</p>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row"></th>
+								<td>
+									<p class="detal-table">Casa do Pastel</p>
+								</td>
+								<td>
+									<p class="detal-table">08:00h - 08:45h</p>
+								</td>
+								<td>
+									<p class="detal-table">R$ 30,00 por adulto</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>
+									<p class="detal-table">Jardim do Amor</p>
+								</td>
+								<td>
+									<p class="detal-table">09:00H - 10:30H</p>
+								</td>
+								<td>
+									<p class="detal-table">R$ 30,00 por adulto</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>
+									<p class="detal-table">Parque Pedras do Silêncio</p>
+								</td>
+								<td>
+									<p class="detal-table">11:00H - 12:00H</p>
+								</td>
+								<td>
+									<p class="detal-table">R$ 30,00 por adulto</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>
+									<p class="detal-table">Restaurante Tempero de Gramado</p>
+								</td>
+								<td>
+									<p class="detal-table">12:30H - 14:00H</p>
+								</td>
+								<td>
+									<p class="detal-table">R$ 26,90 por adulto</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>
+									<p class="detal-table">Parque Olivas de Gramado </p>
+								</td>
+								<td>
+									<p class="detal-table">14:30h - 16:00h</p>
+								</td>
+								<td>
+									<p class="detal-table">R$ 60,00 por adulto</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>
+									<p class="detal-table">Museu do Automóvel </p>
+								</td>
+								<td>
+									<p class="detal-table">16:30h - 18:00h</p>
+								</td>
+								<td>
+									<p class="detal-table">R$ 42,00 por adulto</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>
+									<p class="detal-table">Cantina Linha Bella </p>
+								</td>
+								<td>
+									<p class="detal-table">20:00h - 22:00h</p>
+								</td>
+								<td>
+									<p class="detal-table">R$ 114,00 por adulto</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</th>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">
+					<p class="alinhamento" (click)="clickOnLine(2)"><u>Clique para ver o Detalhamento do Segundo Dia</u>
+					</p>
+					<table class="table table-borderless" *ngIf="line2 == true">
+						<thead>
+							<tr>
+								<th scope="col"></th>
+								<th scope="col">
+									<p class="detal-table">Local</p>
+								</th>
+								<th scope="col">
+									<p class="detal-table">Horário</p>
+								</th>
+								<th scope="col">
+									<p class="detal-table">Valor Aproximado</p>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row"></th>
+								<td>
+									<p class="detal-table">Sao Pedro Casa de Paes e Cafe</p>
+								</td>
+								<td>
+									<p class="detal-table">08:00 - 08:30</p>
+								</td>
+								<td>
+									<p class="detal-table">R$ 20,00 a partir</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>
+									<p class="detal-table">Vale dos Dinossauros</p>
+								</td>
+								<td>
+									<p class="detal-table">09:00H - 10:30H</p>
+								</td>
+								<td>
+									<p class="detal-table">R$ 60,00 por adulto</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>
+									<p class="detal-table">Castelinho Caracol</p>
+								</td>
+								<td>
+									<p class="detal-table">10:30H - 12:00H</p>
+								</td>
+								<td>
+									<p class="detal-table">R$ 10 adulto; R$ 5 idoso</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>
+									<p class="detal-table">Bondinhos Aéreos do Parque da Serr</p>
+								</td>
+								<td>
+									<p class="detal-table">12:30H - 13:30H</p>
+								</td>
+								<td>
+									<p class="detal-table">R$ 42,00 por adulto</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>
+									<p class="detal-table">Alpen Park </p>
+								</td>
+								<td>
+									<p class="detal-table">14:00h - 16:00h</p>
+								</td>
+								<td>
+									<p class="detal-table">R$ 90,00 por adulto</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>
+									<p class="detal-table">Catedral de Pedra </p>
+								</td>
+								<td>
+									<p class="detal-table">16:30h - 18:00h</p>
+								</td>
+								<td>
+									<p class="detal-table"> - </p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>
+									<p class="detal-table">Kongo Pizzaria </p>
+								</td>
+								<td>
+									<p class="detal-table">19:00h - 21:00h</p>
+								</td>
+								<td>
+									<p class="detal-table"> - </p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</th>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">
+					<p class="alinhamento" (click)="clickOnLine(3)"><u>Clique para ver o Detalhamento do Terceiro
+							Dia</u></p>
+					<table class="table table-borderless" *ngIf="line3 == true">
+						<thead>
+							<tr>
+								<th scope="col"></th>
+								<th scope="col">
+									<p class="detal-table">Local</p>
+								</th>
+								<th scope="col">
+									<p class="detal-table">Horário</p>
+								</th>
+								<th scope="col">
+									<p class="detal-table">Valor Aproximado</p>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row"></th>
+								<td>
+									<p class="detal-table">Mini Mundo</p>
+								</td>
+								<td>
+									<p class="detal-table">08:00h - 08:45h</p>
+								</td>
+								<td>
+									<p class="detal-table">R$ 36,00 por adulto</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>
+									<p class="detal-table">Mundo de Chocolate</p>
+								</td>
+								<td>
+									<p class="detal-table">09:00H - 10:00H</p>
+								</td>
+								<td>
+									<p class="detal-table">R$ 35,00 por adulto</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>
+									<p class="detal-table"> Ice Bar Boreal</p>
+								</td>
+								<td>
+									<p class="detal-table">10:30H - 12:00H</p>
+								</td>
+								<td>
+									<p class="detal-table">R$ 32,00 por adulto</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>
+									<p class="detal-table">Restaurante Tempero de Gramado</p>
+								</td>
+								<td>
+									<p class="detal-table">12:30H - 14:00H</p>
+								</td>
+								<td>
+									<p class="detal-table">R$ 26,90 por adulto</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>
+									<p class="detal-table"> Fábrica da Prawer Chocolates </p>
+								</td>
+								<td>
+									<p class="detal-table">14:30h - 16:00h</p>
+								</td>
+								<td>
+									<p class="detal-table"> - </p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>
+									<p class="detal-table"> Super Carros </p>
+								</td>
+								<td>
+									<p class="detal-table">16:30h - 18:00h</p>
+								</td>
+								<td>
+									<p class="detal-table">R$ 60,00 por adulto</p>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row"></th>
+								<td>
+									<p class="detal-table">Josephina Café e Restaurante </p>
+								</td>
+								<td>
+									<p class="detal-table">19:00h - 21:00h</p>
+								</td>
+								<td>
+									<p class="detal-table"> - </p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</th>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
 <section id="tabs">
 	<div class="container">
-		<h6 class="section-title h1">Detalhamento do Roteiro</h6>
-		
 		<!-- lista -->
-		<div class="row">
-			<div class="container mt-5 mb-5">
-				<div class="row">
-					<div class="col-md-6 offset-md-3">
-						<h4>Latest News</h4>
-						<ul class="timeline">
-							<li>
-								<a target="_blank" href="https://www.totoprayogo.com/#">New Web Design</a>
-								<a href="#" class="float-right">21 March, 2014</a>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>
-							</li>
-							<li>
-								<a href="#">21 000 Job Seekers</a>
-								<a href="#" class="float-right">4 March, 2014</a>
-								<p>Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
-							</li>
-							<li>
-								<a href="#">Awesome Employers</a>
-								<a href="#" class="float-right">1 April, 2014</a>
-								<p>Fusce ullamcorper ligula sit amet quam accumsan aliquet. Sed nulla odio, tincidunt vitae nunc vitae, mollis pharetra velit. Sed nec tempor nibh...</p>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-		</div>
-
-
-
-
-
-
-
 		<div class="row">
 			<div class="col-xs-12 ">
 				<nav class="navitar">
@@ -47,10 +359,6 @@
 							role="tab" aria-controls="nav-profile" aria-selected="false">Dia 02</a>
 						<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
 							role="tab" aria-controls="nav-contact" aria-selected="false">Dia 03</a>
-						<a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab"
-							aria-controls="nav-about" aria-selected="false">Dia 04</a>
-						<a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about2" role="tab"
-							aria-controls="nav-about" aria-selected="false">Dia 05</a>
 					</div>
 				</nav>
 				<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
@@ -61,12 +369,6 @@
 						<app-carrousel-roteiro></app-carrousel-roteiro>
 					</div>
 					<div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-						<app-carrousel-roteiro></app-carrousel-roteiro>
-					</div>
-					<div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
-						<app-carrousel-roteiro></app-carrousel-roteiro>
-					</div>
-					<div class="tab-pane fade" id="nav-about2" role="tabpanel" aria-labelledby="nav-about-tab2">
 						<app-carrousel-roteiro></app-carrousel-roteiro>
 					</div>
 				</div>

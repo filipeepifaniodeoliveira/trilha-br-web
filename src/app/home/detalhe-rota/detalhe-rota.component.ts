@@ -26,35 +26,35 @@ export class DetalheRotaComponent implements OnInit {
     this.images = [
       {
         id: 1,
-        url: 'https://preview.ibb.co/jrsA6R/img12.jpg'
+        url: '../../../assets/img/img-cards/parque-pedras-silencio.jpg'
       },
       {
         id: 2,
-        url: 'https://preview.ibb.co/kPE1D6/clouds.jpg'
+        url: '../../../assets/img/img-cards/tempero-gramado.jpg'
       },
       {
         id: 3,
-        url: 'https://preview.ibb.co/mwsA6R/img7.jpg'
+        url: '../../../assets/img/img-cards/parque-olivas.jpg'
       },
       {
         id: 4,
-        url: 'https://preview.ibb.co/jrsA6R/img12.jpg'
+        url: '../../../assets/img/img-cards/musel-automovel.jpg'
       },
       {
         id: 5,
-        url: 'https://preview.ibb.co/kPE1D6/clouds.jpg'
+        url: '../../../assets/img/img-cards/cantina-linha-bela.jpg'
       },
       {
         id: 6,
-        url: 'https://preview.ibb.co/mwsA6R/img7.jpg'
+        url: '../../../assets/img/img-cards/prawer.jpg'
       },
       {
         id: 7,
-        url: 'https://preview.ibb.co/kZGsLm/img8.jpg'
+        url: '../../../assets/img/img-cards/musel-automovel.jpg'
       },
       {
         id: 8,
-        url: 'https://preview.ibb.co/kZGsLm/img8.jpg'
+        url: '../../../assets/img/img-cards/colono.jpg'
       }
     ];
   }

@@ -118,6 +118,10 @@
     max-height: 100px;
     overflow: hidden;
   }
+
+  .item-box-blog-text p {
+    font-size: 14px;
+  } 
   
   .mt-10 {
     float: left;
@@ -164,4 +168,9 @@
     .navitar {
       display: block;
     }
+  }
+
+  .img-list {
+    width: 100%;
+    height: 150px !important;
   }

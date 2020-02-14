@@ -4,11 +4,11 @@ section {
 }
 
 section .section-title {
-    text-align: center;
+    /* text-align: center;
     color: #007b5e;
     margin-bottom: 50px;
     text-transform: uppercase;
-    font-size: 19px;
+    font-size: 19px; */
 }
 #tabs{
 	/* background: #007b5e; */
@@ -58,6 +58,20 @@ section .section-title {
     }
   }
 
+
+  .section-title {
+    text-align: center;
+    color: #fff;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-size: 22px;
+  }
+
+  .detal-table {
+    font-size: 14px;
+    color: white;
+  }
 
 
 
@@ -126,4 +140,24 @@ ul.timeline > li:before {
   width: 20px;
   height: 20px;
   z-index: 400;
+}
+
+.alinhamento{
+  text-align: left;
+  font-size: 15px;
+}
+
+.alinhamento-title {
+  text-align: center;
+  font-size: 16px;
+  margin-left: 157PX;
+  margin-top: 12px;
+}
+
+.lista-rubro {
+  margin-top: 30px;
+}
+
+.table-dark {
+  margin-top: 20px;
 }
