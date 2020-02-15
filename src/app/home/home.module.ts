@@ -15,11 +15,17 @@ import { CarrouselRoteiroComponent } from './commons/carrousel-roteiro/carrousel
 import { MapsComponent } from './commons/maps/maps.component';
 import { AgmCoreModule } from '@agm/core';
 import { DetalheRota2Component } from './detalhe-rota2/detalhe-rota2.component';
+import { CarrouselRoteiro1Dia2Component } from './commons/carrossels/carrousel-roteiro1-dia2/carrousel-roteiro1-dia2.component';
+import { CarrouselRoteiro1Dia3Component } from './commons/carrossels/carrousel-roteiro1-dia3/carrousel-roteiro1-dia3.component';
+import { CarrouselRoteiro2Dia1Component } from './commons/carrossels/carrousel-roteiro2-dia1/carrousel-roteiro2-dia1.component';
+import { CarrouselRoteiro2Dia2Component } from './commons/carrossels/carrousel-roteiro2-dia2/carrousel-roteiro2-dia2.component';
+import { CarrouselRoteiro2Dia3Component } from './commons/carrossels/carrousel-roteiro2-dia3/carrousel-roteiro2-dia3.component';
+import { ListaRoteiro2Component } from './commons/lista-roteiro2/lista-roteiro2.component';
 
 
 @NgModule({
   declarations: [ 
-    HomeComponent, GeradorRotasComponent, DetalheRotaComponent, ImageLightboxComponent, ListaRoteiroComponent, CarrouselRoteiroComponent, MapsComponent, DetalheRota2Component,
+    HomeComponent, GeradorRotasComponent, DetalheRotaComponent, ImageLightboxComponent, ListaRoteiroComponent, CarrouselRoteiroComponent, MapsComponent, DetalheRota2Component, CarrouselRoteiro1Dia2Component, CarrouselRoteiro1Dia3Component, CarrouselRoteiro2Dia1Component, CarrouselRoteiro2Dia2Component, CarrouselRoteiro2Dia3Component, ListaRoteiro2Component,
   ],
   imports: [
     CommonModule,

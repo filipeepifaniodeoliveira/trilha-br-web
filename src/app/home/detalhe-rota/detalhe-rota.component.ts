@@ -83,16 +83,19 @@ export class DetalheRotaComponent implements OnInit {
 
   // SignOut Firebase Session and Clean LocalStorage
   logoutUser() {
-    this.authService.logout()
-      .then(res => {
-        console.log(res);
-        localStorage.removeItem('user');
-        this.isLogado$ = false;
-        this.router.navigateByUrl('/home/home');
-      }, err => {
-        // this.showMessage("danger", err.message);
-        console.log("danger", err.message);
-      });
+
+    this.router.navigateByUrl('/home/rotas');
+
+    // this.authService.logout()
+    //   .then(res => {
+    //     console.log(res);
+    //     localStorage.removeItem('user');
+    //     this.isLogado$ = false;
+    //     this.router.navigateByUrl('/home/home');
+    //   }, err => {
+    //     // this.showMessage("danger", err.message);
+    //     console.log("danger", err.message);
+    //   });
   }
 
 }

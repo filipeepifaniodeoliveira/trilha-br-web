@@ -131,4 +131,14 @@ img.zoom {
     font-size: 22px;
 }
 
+.bt-compra {
+    padding: 20px;
+    color: teal !important;
+}
+
+.bt-return {
+    padding: 20px;
+    color: brown !important;
+}
+
 
