@@ -353,11 +353,11 @@
 			<div class="col-xs-12 ">
 				<nav class="navitar">
 					<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-						<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home"
+						<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" (click)="alterMap(1);"
 							role="tab" aria-controls="nav-home" aria-selected="true">Dia 01</a>
-						<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
+						<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" (click)="alterMap(2);"
 							role="tab" aria-controls="nav-profile" aria-selected="false">Dia 02</a>
-						<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+						<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" (click)="alterMap(3);"
 							role="tab" aria-controls="nav-contact" aria-selected="false">Dia 03</a>
 					</div>
 				</nav>
@@ -378,3 +378,39 @@
 	</div>
 </section>
 <!-- ./Tabs -->
+
+<div class="container h-12">
+	<div class="row h-100 align-items-center justify-content-center text-center">
+		<p class="text-white-75 font-weight-light mb-5">
+			Veja no mapa os pontos sugeridos para a sua rota.
+			Ao clicar em cada item da lista veja o
+			detalhe de cada item indicado em sua rota.
+		</p>
+	</div>
+</div>
+
+<div class="row h-40 align-items-center justify-content-center text-center">
+	<div>
+		<!-- <app-maps></app-maps> -->
+		<div id="map-container-google-1" class="z-depth-1-half map-container" *ngIf="exibMap == '1'">
+			<iframe src="https://www.google.com/maps/d/embed?mid=1LqCqvFUNgTMXkUFS2WxpZAtrPdYJVxJB" width="1040"
+				height="480">
+			</iframe>
+		</div>
+
+		<div id="map-container-google-1" class="z-depth-1-half map-container" *ngIf="exibMap == '2'">
+
+			<iframe src="https://www.google.com/maps/d/embed?mid=1LqCqvFUNgTMXkUFS2WxpZAtrPdYJVxJB" width="1040"
+				height="480">
+			</iframe>
+		</div>
+
+		<div id="map-container-google-1" class="z-depth-1-half map-container" *ngIf="exibMap == '3'">
+
+			<iframe src="https://www.google.com/maps/d/embed?mid=1LqCqvFUNgTMXkUFS2WxpZAtrPdYJVxJB" width="1040"
+				height="480">
+			</iframe>
+		</div>
+
+	</div>
+</div>

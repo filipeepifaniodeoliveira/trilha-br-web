@@ -1,0 +1,102 @@
+<div id="page-top">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">TRILHA BR</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse navFonts" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" (click)="setRouter('home');">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" (click)="setRouter('sobre');">SOBRE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">DUVIDAS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger Cbtn Cbtn-danger bt-compra">COMPRAR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger Cbtn Cbtn-danger bt-return" (click)="logoutUser();">VOLTAR</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container h-10">
+      <div class="row h-100 align-items-center justify-content-center text-center">
+        <div class="col-lg-10 align-self-end">
+          <hr class="divider my-4">
+          <img class="imgLogo" src="../../../assets/img/icons/trilha-router.jpeg" alt="">
+          <hr class="divider my-4">
+          <hr class="divider my-4">
+        </div>
+        <div class="col-lg-8 align-self-baseline">
+          <p class="text-white-75 font-weight-light mb-5">
+            Veja detalhes do lugar selecionado para o seu roteiro e aproveite já para ir se imaginando neste lugar.
+          </p>
+          <hr class="divider my-4">
+        </div>
+        <div class="col-lg-12">
+          <div class="container text-center">
+            <h6 class="section-title h1">Detalhe do Local</h6>
+            <div class="gallerize-example">
+              <div class="container">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="card mt-4">
+                        <img class="card-img-top img-fluid"
+                          src="https://media-cdn.tripadvisor.com/media/photo-s/12/24/74/f8/entrada-do-restaurante.jpg"
+                          alt="">
+                        <div class="card-body">
+                          <h3 class="card-title">Casa do Pastel</h3>
+                          <h4>Valor a partir de 13.99 R$</h4>
+                          <p class="card-text">A Casa do Pastel oferece à você seus deliciosos pastéis. A Casa do Pastel
+                            em Gramado fica bem no centro da cidade e oferece aos seus clientes pratos maravilhosos,
+                            além é claro dos deliciosos pastéis. Servidos sempre quentinhos, os pastéis da Casa do
+                            Pastel são muito gostosos, pois são bem recheados e de diversos sabores. Além dos
+                            tradicionais pastéis, a casa ainda oferece porções de minipastéis, lasanhas, sopas, bebidas
+                            quentes - como uma seleção especial de chás que surpreendem o paladar dos clientes e aquecem
+                            os dias mais frios em Gramado. Para as crianças, a Casa do Pastel criou o combo kids,
+                            saboroso e superdivertido. Com um ambiente único e aconchegante, a casa transforma com
+                            dedicação, amor e qualidade as tradicionais receitas de pastéis e lasanhas em uma
+                            experiência inesquecível a cada mordida.</p>
+                          <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+                          4.0 stars
+                        </div>
+                      </div>
+                      <div class="card card-outline-secondary my-4">
+                        <div class="card-header">
+                          Detalhes
+                        </div>
+                        <div class="card-body">
+                          <p>Atendimento : Quarta a segunda-feira, das 08h às 22h30.</p>
+                          <small class="text-muted"></small>
+                          <hr>
+                          <p>Endereço : R. Ângelo Bisol, 444 - Centro, Gramado - RS, 95670-000.</p>
+                          <small class="text-muted"></small>
+                          <hr>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /.col-lg-9 -->
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>

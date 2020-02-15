@@ -21,11 +21,16 @@ import { CarrouselRoteiro2Dia1Component } from './commons/carrossels/carrousel-r
 import { CarrouselRoteiro2Dia2Component } from './commons/carrossels/carrousel-roteiro2-dia2/carrousel-roteiro2-dia2.component';
 import { CarrouselRoteiro2Dia3Component } from './commons/carrossels/carrousel-roteiro2-dia3/carrousel-roteiro2-dia3.component';
 import { ListaRoteiro2Component } from './commons/lista-roteiro2/lista-roteiro2.component';
+import { CasaPastelComponent } from './commons/detalhes-passeio/casa-pastel/casa-pastel.component';
+import { JardimAmorComponent } from './commons/detalhes-passeio/jardim-amor/jardim-amor.component';
+import { PedraSilencioComponent } from './commons/detalhes-passeio/pedra-silencio/pedra-silencio.component';
+import { TemperoGramadoComponent } from './commons/detalhes-passeio/tempero-gramado/tempero-gramado.component';
+import { ParqueOlivaComponent } from './commons/detalhes-passeio/parque-oliva/parque-oliva.component';
 
 
 @NgModule({
   declarations: [ 
-    HomeComponent, GeradorRotasComponent, DetalheRotaComponent, ImageLightboxComponent, ListaRoteiroComponent, CarrouselRoteiroComponent, MapsComponent, DetalheRota2Component, CarrouselRoteiro1Dia2Component, CarrouselRoteiro1Dia3Component, CarrouselRoteiro2Dia1Component, CarrouselRoteiro2Dia2Component, CarrouselRoteiro2Dia3Component, ListaRoteiro2Component,
+    HomeComponent, GeradorRotasComponent, DetalheRotaComponent, ImageLightboxComponent, ListaRoteiroComponent, CarrouselRoteiroComponent, MapsComponent, DetalheRota2Component, CarrouselRoteiro1Dia2Component, CarrouselRoteiro1Dia3Component, CarrouselRoteiro2Dia1Component, CarrouselRoteiro2Dia2Component, CarrouselRoteiro2Dia3Component, ListaRoteiro2Component, CasaPastelComponent, JardimAmorComponent, PedraSilencioComponent, TemperoGramadoComponent, ParqueOlivaComponent,
   ],
   imports: [
     CommonModule,

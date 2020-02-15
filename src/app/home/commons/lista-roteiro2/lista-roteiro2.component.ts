@@ -13,7 +13,10 @@ export class ListaRoteiro2Component implements OnInit {
   line2 = false;
   line3 = false;
 
+  exibMap = '';
+
   ngOnInit() {
+    this.exibMap = '1';
   }
 
   clickOnLine(value) {
@@ -47,6 +50,23 @@ export class ListaRoteiro2Component implements OnInit {
         }
         break;
 
+      default:
+        break;
+    }
+  }
+
+
+  alterMap(value) {
+    switch (value) {
+      case 1:
+        this.exibMap = '1';
+        break;
+      case 2:
+        this.exibMap = '2';
+        break;
+      case 3:
+        this.exibMap = '3';
+        break;
       default:
         break;
     }
